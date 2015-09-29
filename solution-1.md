@@ -4,6 +4,7 @@
 - scale
 
 > 开人员只需要按照ue稿给定的宽度和高度去开发即可，不去去考虑2x的问题
+
 ```
 /**
  * the thinking method
@@ -17,12 +18,9 @@ var scale = width/baseLayoutWidth;
 metaEl.setAttribute('content', 'width=device-width' + ',initial-scale=' + scale + ',maximum-scale=' + scale + ', minimum-scale=' + scale + ',user-scalable=no');
 // 注意：头部meta初始化必须这么写
 <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-
-
 ```
 
 > 为什么alet出来的两次document.documentElement.clientWidth 值不一样
-
 
 ## viewport 缩放优点
 - 开发简单
