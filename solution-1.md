@@ -23,7 +23,7 @@ metaEl.setAttribute('content', 'width=device-width' + ',initial-scale=' + scale 
 > 为什么alet出来的两次document.documentElement.clientWidth 值不一样
 
 ## viewport 缩放优点
-- 开发简单
+- 开发简单，只要按照开发稿，px单位即可，不用多想
 - 实现响应式
 
 ## viewport 缩放缺点
