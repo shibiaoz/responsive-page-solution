@@ -3,24 +3,19 @@
 - baseLayoutWidth  暂且先这么叫（我起的），这个是ue稿的宽度
 - scale
 
-> 开人员智选找ue稿给定的宽度和高度去开发即可，不去去考虑2x的问题
+> 开人员只需要按照ue稿给定的宽度和高度去开发即可，不去去考虑2x的问题
 ```
 /**
  * the thinking method
  * var scale = device-width/baseLayoutWidth;
  */
-在页面顶部修改viewport的值
-
-
+// 在页面顶部修改viewport的值
 var metaEl =  document.querySelector('meta[name="viewport"]');
 var width = document.documentElement.clientWidth;
 var baseLayoutWidth = 640;
 var scale = width/baseLayoutWidth;
 metaEl.setAttribute('content', 'width=device-width' + ',initial-scale=' + scale + ',maximum-scale=' + scale + ', minimum-scale=' + scale + ',user-scalable=no');
-
-
-
-注意：头部meta初始化必须这么写
+// 注意：头部meta初始化必须这么写
 <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 
