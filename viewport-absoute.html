@@ -29,8 +29,9 @@
         scale();
         var resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize';
         window.addEventListener(resizeEvt, function () {
+            console.log('lister...')
            //alert(document.documentElement.clientWidth);
-           document.getElementById('show').innerHTML = 'clientWidth => ' + document.documentElement.clientWidth + 'scale => ' + (document.documentElement.clientWidth/750);
+           document.getElementById('show').innerHTML = 'clientWidth => ' + document.documentElement.clientWidth + 'scale => ' + (document.documentElement.clientWidth/750) + '  window.innerWidth => ' + window.innerWidth;
             scale();
             // alert(window.orientation);
             console.log(document.documentElement.clientWidth);
@@ -56,9 +57,9 @@
     }
     .main-2 {
         width: 750px;
-        height: 200px;
-        background-color: red;
-        opacity: 0.3;
+        height: 400px;
+        /*background-color: red;*/
+        /*opacity: 0.3;*/
     }
     div img {
         width: 100%;
