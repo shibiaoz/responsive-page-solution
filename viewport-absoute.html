@@ -24,10 +24,16 @@
             console.log(document.documentElement.clientWidth);
         }
         scale();
-        screen.addEventListener('orientationchange', function () {
-            alert(document.documentElement.clientWidth);
+        alert(window.orientationchange);
+        window.addEventListener('orientationchange', function () {
+            // alert(document.documentElement.clientWidth);
+            alert(window.orientation);
             console.log(document.documentElement.clientWidth);
         });
+        // window.addEventListener("resize", function() {
+        //     // Get screen size (inner/outerWidth, inner/outerHeight)
+        //     alert('resize')
+        // }, false);
 
     </script>
 </head>
