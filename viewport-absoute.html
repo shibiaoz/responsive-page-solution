@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>固定viewport</title>
+    <script type="text/javascript">
+        var scale = document.documentElement.clientWidth/320;
+        // 375 => 1.171875
+        //
+
+        var scale2 = document.documentElement.clientWidth/640;
+        // 0.5
+    </script>
+    <meta charset="utf8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=3,user-scalable=no">
+    <script type="text/javascript">
+        function scale () {
+             console.log(document.documentElement.clientWidth);
+            var metaEl =  document.querySelector('meta[name="viewport"]');
+            var width = document.documentElement.clientWidth;
+            var baseLayoutWidth = 750;
+            var scale = width/baseLayoutWidth;
+            console.log('scale =>  ' + scale);
+            metaEl.setAttribute('content', 'width=750' + ',initial-scale=' + scale + ',maximum-scale=' + scale + ', minimum-scale=' + scale + ',user-scalable=no');
+            console.log(document.documentElement.clientWidth);
+        }
+        scale();
+        window.addEventListener('orientationchange', function () {
+            console.log(document.documentElement.clientWidth);
+        });
+
+    </script>
+</head>
+
+<style type="text/css">
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    .main {
+        width: 320px;
+        height: 200px;
+        background-color: gray;
+        opacity: 0.3;
+    }
+    .main-2 {
+        width: 750px;
+        height: 200px;
+        background-color: red;
+        opacity: 0.3;
+    }
+    div img {
+        width: 100%;
+    }
+</style>
+<body>
+    <div class="main">
+        <img src="http://tb1.bdstatic.com/tb/cms/ngmis/adsense/file_1446003995158.jpg" alt="">
+    </div>
+    <div class="main-2">
+        750px;
+        <img src="http://tb1.bdstatic.com/tb/cms/ngmis/adsense/file_1446003995158.jpg" alt="">
+    </div>
+
+</body>
+</html>
