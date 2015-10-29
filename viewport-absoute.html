@@ -27,6 +27,7 @@
         var resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize';
         window.addEventListener(resizeEvt, function () {
             alert(document.documentElement.clientWidth);
+            scale();
             // alert(window.orientation);
             console.log(document.documentElement.clientWidth);
         });
