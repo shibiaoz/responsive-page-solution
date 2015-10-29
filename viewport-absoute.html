@@ -26,7 +26,8 @@
         scale();
         var resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize';
         window.addEventListener(resizeEvt, function () {
-            alert(document.documentElement.clientWidth);
+           //alert(document.documentElement.clientWidth);
+           document.getElementById('show').innerHTML = document.documentElement.clientWidth;
             scale();
             // alert(window.orientation);
             console.log(document.documentElement.clientWidth);
@@ -59,8 +60,13 @@
     div img {
         width: 100%;
     }
+    #show {
+        font-size: 30px;
+        color: red;
+    }
 </style>
 <body>
+<div id="show"></div>
     <div class="main">
         <img src="http://tb1.bdstatic.com/tb/cms/ngmis/adsense/file_1446003995158.jpg" alt="">
     </div>
