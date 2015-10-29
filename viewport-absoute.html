@@ -21,7 +21,7 @@
             var baseLayoutWidth = 750;
             var scale = width/baseLayoutWidth;
             console.log('scale =>  ' + scale);
-            document.getElementById('show').innerHTML = 'clientWidth => ' + width + 'scale => ' + scale;
+
 
             metaEl.setAttribute('content', 'width=750' + ',initial-scale=' + scale + ',maximum-scale=' + scale + ', minimum-scale=' + scale + ',user-scalable=no');
             console.log(document.documentElement.clientWidth);
@@ -30,6 +30,7 @@
         var resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize';
         window.addEventListener(resizeEvt, function () {
            //alert(document.documentElement.clientWidth);
+           document.getElementById('show').innerHTML = 'clientWidth => ' + document.documentElement.clientWidth + 'scale => ' + (document.documentElement.clientWidth/750);
             scale();
             // alert(window.orientation);
             console.log(document.documentElement.clientWidth);
