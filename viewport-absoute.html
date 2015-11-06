@@ -11,31 +11,38 @@
         // 0.5
     </script>
     <meta charset="utf8">
-    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=3,user-scalable=no">
+    <meta name="viewport" content="width=750,user-scalable=no">
+    <!-- <meta name="viewport" content="width=750,initial-scale=1,maximum-scale=1,user-scalable=no">
+    加不加initial-scale=1,maximum-scale=1 区别真的好大啊
+    为什么呢，content="width=750,user-scalable=no" 这种方式能很好的适配呢
+    target-densitydpi=device-dpi,width=640,user-scalable=no
+     -->
     <script type="text/javascript">
-        function scale () {
-             console.log(document.documentElement.clientWidth);
-            var metaEl =  document.querySelector('meta[name="viewport"]');
-            var width = document.documentElement.clientWidth;
+        // function scale () {
+        //      console.log(document.documentElement.clientWidth);
+        //     var metaEl =  document.querySelector('meta[name="viewport"]');
+        //     var width = document.documentElement.clientWidth;
 
-            var baseLayoutWidth = 750;
-            var scale = width/baseLayoutWidth;
-            console.log('scale =>  ' + scale);
+        //     var baseLayoutWidth = 750;
+        //     var scale = width/baseLayoutWidth;
+        //     console.log('scale =>  ' + scale);
 
 
-            metaEl.setAttribute('content', 'width=750' + ',initial-scale=' + scale + ',maximum-scale=' + scale + ', minimum-scale=' + scale + ',user-scalable=no');
-            console.log(document.documentElement.clientWidth);
-        }
-        scale();
-        var resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize';
-        window.addEventListener(resizeEvt, function () {
-            console.log('lister...')
-           //alert(document.documentElement.clientWidth);
-           document.getElementById('show').innerHTML = 'clientWidth => ' + document.documentElement.clientWidth + 'scale => ' + (document.documentElement.clientWidth/750) + '  window.innerWidth => ' + window.innerWidth;
-            scale();
-            // alert(window.orientation);
-            console.log(document.documentElement.clientWidth);
-        });
+        //     metaEl.setAttribute('content', 'width=750' + ',initial-scale=' + scale + ',maximum-scale=' + scale + ', minimum-scale=' + scale + ',user-scalable=no');
+        //     console.log(document.documentElement.clientWidth);
+        // }
+        // scale();
+        // var resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize';
+        // window.addEventListener(resizeEvt, function () {
+        //     console.log('lister...')
+        //    //alert(document.documentElement.clientWidth);
+        //    document.getElementById('show').innerHTML = 'clientWidth => ' + document.documentElement.clientWidth + 'scale => ' + (document.documentElement.clientWidth/750) + '  window.innerWidth => ' + window.innerWidth;
+        //    // debugger;
+        //    console.log('window innerWidth', window.innerWidth);
+        //     scale();
+        //     // alert(window.orientation);
+        //     console.log(document.documentElement.clientWidth);
+        // });
         // window.addEventListener("resize", function() {
         //     // Get screen size (inner/outerWidth, inner/outerHeight)
         //     alert('resize')

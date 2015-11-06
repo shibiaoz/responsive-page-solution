@@ -1,0 +1,22 @@
+!
+function() {
+    function e(e) {
+        e.target && /^(input|textarea|a)$/i.test(e.target.tagName) || e.preventDefault()
+    }
+    var t = 400,
+    n = screen.width / t,
+    i = '<meta name="viewport" content="width=' + t + ", initial-scale=" + n + ", maximum-scale=" + n + ", minimum-scale=" + n + ', user-scalable=no, target-densitydpi=device-dpi, minimal-ui" />';
+    document.write(i),
+    document.addEventListener("touchstart", e, !1),
+    document.addEventListener("touchmove", e, !1),
+    window.addEventListener("load",
+    function() {
+        var e = document.body.clientHeight,
+        t = 500;
+        if (t > e) {
+            var n = document.querySelector(".lg-container");
+            n && (n.style.webkitTransformOrigin = "50% 0", n.style.webkitTransform = "translateZ(0) scale(" + e / t + ")")
+        }
+    },
+    !1)
+} ();

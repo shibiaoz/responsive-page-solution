@@ -1,0 +1,46 @@
+<!DOCTYPE html >
+<html dpr='2'>
+<head>
+    <title>ssss</title>
+    <meta charset="utf8" >
+    <script type="text/javascript">
+        console.log(document.documentElement.clientWidth);
+    </script>
+     <meta content="width=400,initial-scale=0.8" name="viewport">
+     <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+         .w-100 {
+            width:400px;
+            height: 100px;
+            outline: solid 1px red;
+        }
+        [dpr='1'] {
+               font-size:16px;
+               outline: solid 2px yellow;
+
+        }
+
+
+        [dpr='2'] {
+               font-size:32px;
+               outline: solid 2px green;
+        }
+     </style>
+
+    <script type="text/javascript">
+        console.log('clientWidth',document.documentElement.clientWidth);
+        console.log('innerWidth',window.innerWidth);
+
+    </script>
+</head>
+<body>
+<div class="w-100">
+    无论是采用动态生成viewport或者写死scale，字体都需要适配大屏。之前提出的rem方案被证实在不同手机上显示不一致，这里还是回归成了px。
+
+
+</div>
+</body>
+</html>

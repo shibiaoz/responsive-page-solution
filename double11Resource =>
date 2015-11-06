@@ -1,0 +1,16 @@
+double11Banner =>
+{
+    isShowBigPic: true/false,
+    bigPic: string image src,
+    bigPicLink: string url link,
+    bannerPic: string image src,
+    banenrLink: string url link,
+
+}
+double11Couplet => {
+    coupletLeft: string image src
+    coupletLeftLink: string url link
+    copletRight: string iamge src,
+    copleRightLink: string url link,
+    backImgUrl: string image src
+}

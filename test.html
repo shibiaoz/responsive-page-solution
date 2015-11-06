@@ -2,19 +2,46 @@
 <html>
 <head>
     <title>test</title>
-     <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta content="initial-scale=0.5" name="viewport">
+    <meta charset="utf8">
+
     <style type="text/css" >
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            width: 640px;
+        }
         .test {
-            width: 200px;
-            height: 100px;
-            border: solid 1px red;
+            font-size: 32px;
+            color: red;
+            width: 640px;
+            height: 200px;
+            outline: solid 1px red;
+        }
+        p {
+            word-break: break-all;
+            width: 100%;
+        }
+        .vm-50-vh-50 {
+            width: 50vw;
+            height: 100vh;
+            outline: solid 2px yellow;
         }
     </style>
-    <script src="http://tb2.bdstatic.com/??tb/mobile/sglobal/lib/lib_8282a09.js,tb/mobile/sglobal/lib/extend_d63bbc8.js"></script>
 </head>
 <body>
+
+<div class="vm-50-vh-50">
+vm-50-vh-50vm-50-vh-50vm-50-vh-50
+</div>
+
+<p>
+sdfsfsdsdfsfsdsdfsfsdsdfsfsdsdfsfsdsdfsfsdsdfsfsdsdfsfsdsdfsfsdsdfsfsdsdfsfsdsdfsfsdsdfsfsdsdfsfsdsdfsfsdsdfsfsdsdfsfsdsdfsfsdsdfsfsdsdfsfsdsdfsfsdsdfsfsdsdfsfsdsdfsfsdsdfsfsdsdfsfsdsdfsfsdsdfsfsdsdfsfsdsdfsfsdsdfsfsdsdfsfsdsdfsfsdsdfsfsdsdfsfsdsdfsfsdsdfsfsdsdfsfsdsdfsfsdsdfsfsdsdfsfsd
+</p>
 <div class="test">
-    sdfsfsd
+    哈哈哈
 </div>
 </body>
 </html>
